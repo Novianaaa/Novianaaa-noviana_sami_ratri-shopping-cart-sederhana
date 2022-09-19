@@ -1,0 +1,42 @@
+start
+
+store "name_product" with ['001' => 'produk1', '002'=> 'produk2']
+store "product_prince" with [name_product.key[0] => name_product.key[1]=>20000]
+store "stok_product" with integer 
+store "product_prince" with number
+store "payment" with integer
+
+begin 
+write('input id_product :');read(id_product);
+
+if (id_barang = '001') then 
+begin 
+    name_product :='produk1';
+    product_prince :='50000';
+
+else if (search name_product); read (name_product);
+
+print ['name_product','stok_product','product_prince']
+
+WHILE 
+    "purchase_amount" less than or equal" with 0
+DO 
+    back to input purchase_amount
+
+STORE "purchase_amount" with > 0 
+STORE "add to cart" with integer
+
+IF "purchase_amount" more than or equal "0"
+    back to input id_product or search name_product
+ELSE
+   FUNCTION AddCart (purchase_amount, product_prince)
+    STORE "result" with "purchase_amount" times "product_prince"
+    RETURN "result"
+END FUNCTION
+
+STORE "tempCart" with AddCart(q);
+PRINT "tempCart"
+
+STORE "payment" with pay (q);
+proses checkou 
+output :[ 'name_product', 'purchase_amount', 'total_price', 'amount_all_price' ]
